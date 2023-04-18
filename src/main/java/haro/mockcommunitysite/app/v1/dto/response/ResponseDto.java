@@ -1,6 +1,7 @@
 package haro.mockcommunitysite.app.v1.dto.response;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 
 @Getter

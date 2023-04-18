@@ -2,6 +2,7 @@ package haro.mockcommunitysite.app.v1.dto.request;
 
 import java.sql.Date;
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
@@ -27,9 +28,9 @@ public class MemberRequestDto {
     private String email;
     private String memberName;
     private Date birthdate;
-    private Timestamp createdAt;
-    private Timestamp updatedAt;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
     @NotBlank
-    private String passwordConfirm;
+    private String confirmingPassword;
 }
