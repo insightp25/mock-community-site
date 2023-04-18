@@ -16,7 +16,7 @@ public class MemberResponseDto {
     private String email;
     private String memberName;
     private Date birthdate;
-    // private String password;
+    private String password;
 
     public MemberResponseDto(String email, String memberName, Date birthdate) {
         this.email = email;

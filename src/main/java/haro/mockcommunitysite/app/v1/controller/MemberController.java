@@ -31,12 +31,8 @@ public class MemberController {
     }
 
 
-
-
     @PostMapping("/logout")
     public ResponseDto<?> logout() {
-
-
+        return null;
     }
-
 }

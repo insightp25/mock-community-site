@@ -32,13 +32,13 @@ public class MemberService {
         // displayMemberId 사용 로그인 시도 시(requestDto 의 email 필드에 값이 존재하지 않을 시)
         if (requestDto.getEmail().isEmpty()) {
             if (null != isPresentMemberByDisplayMemberId(requestDto.getDisplayMemberId())) {
-                return ResponseDto.fail("DUPLICATED_NICKNAME",
-                        "nickname is duplicated");
+                return ResponseDto.fail("DUPLICATE_USER_ID",
+                        "the user id already exists");
             }
         }
         if (null != isPresentMemberByEmail(requestDto.getEmail())) {
-            return ResponseDto.fail("DUPLICATED_NICKNAME",
-                    "nickname is duplicated");
+            return ResponseDto.fail("DUPLICATED_EMAIL",
+                    "the email is already taken");
         }
 
 
