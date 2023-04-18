@@ -1,0 +1,35 @@
+package haro.mockcommunitysite.app.v1.dto.request;
+
+import java.sql.Date;
+import java.sql.Timestamp;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@Getter
+@AllArgsConstructor
+public class MemberRequestDto {
+
+    private Long memberId;
+
+    @NotBlank
+    @Size(min = 4, max = 12)
+    @Pattern(regexp = "[a-zA-Z\\d]*${3,12}")
+    private String displayMemberId;
+
+    @NotBlank
+    @Size(min = 4, max = 32)
+    @Pattern(regexp = "[a-z\\d]*${3,32}")
+    private String password;
+
+    private String email;
+    private String memberName;
+    private Date birthdate;
+    private Timestamp createdAt;
+    private Timestamp updatedAt;
+
+    @NotBlank
+    private String passwordConfirm;
+}
